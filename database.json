@@ -4,7 +4,7 @@
 			"uuid": "fdece8e75deb321420ca6f200342bd5ef58ca082ec0750ae624023ffe7cde7ec",
 			"gcp_id": "GCP.INDEX.LatQtrDeg",
 			"name": "LatQtrDeg",
-			"latex": "LatQtrDeg",
+			"latex": "lat",
 			"description": "Latitude (1/4 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -13,7 +13,7 @@
 			"uuid": "ee0f2f97db0a29c57832186ffaf785856319feeaf8fa123a66861ac32d41c91b",
 			"gcp_id": "GCP.INDEX.LonQtrDeg",
 			"name": "LonQtrDeg",
-			"latex": "LonQtrDeg",
+			"latex": "lon",
 			"description": "Longitude (1/4 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -22,7 +22,7 @@
 			"uuid": "986bdb23961ae70b1e6d90b39559e648dae896de00491c2053ced22c1289f489",
 			"gcp_id": "GCP.INDEX.LatHalfDeg",
 			"name": "LatHalfDeg",
-			"latex": "LatHalfDeg",
+			"latex": "lat",
 			"description": "Latitude (1/2 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -31,7 +31,7 @@
 			"uuid": "17f1bd3fd47565c3bc8fc71413d71a4d90737df5500e26d71db8483fcf281357",
 			"gcp_id": "GCP.INDEX.LonHalfDeg",
 			"name": "LonHalfDeg",
-			"latex": "LonHalfDeg",
+			"latex": "lon",
 			"description": "Longitude (1/2 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -40,7 +40,7 @@
 			"uuid": "304af8f327e144e29680fb6e0c168c0a85a97a2e5d84bd0f01fe7d596cbdfd12",
 			"gcp_id": "GCP.INDEX.LatDEG",
 			"name": "LatDEG",
-			"latex": "LatDEG",
+			"latex": "lat",
 			"description": "Latitude (1 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -49,7 +49,7 @@
 			"uuid": "ea19fb05646e9986e0644b628f0976ff31a796be1bc4ad86690cc4a0ac8df2da",
 			"gcp_id": "GCP.INDEX.LonDEG",
 			"name": "LonDEG",
-			"latex": "LonDEG",
+			"latex": "lon",
 			"description": "Longitude (1 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -58,7 +58,7 @@
 			"uuid": "83ad20c00ed941707821f73905076e7636566e69a48e5a00b1664b5bb08de91c",
 			"gcp_id": "GCP.INDEX.LatTwoDeg",
 			"name": "LatTwoDeg",
-			"latex": "LatTwoDeg",
+			"latex": "lat",
 			"description": "Latitude (2 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -67,7 +67,7 @@
 			"uuid": "7758b87bf81facd0d6f0faccff7c8eb29db772deda5c60464db67e42ccff4da8",
 			"gcp_id": "GCP.INDEX.LonTwoDeg",
 			"name": "LonTwoDeg",
-			"latex": "LonTwoDeg",
+			"latex": "lon",
 			"description": "Longitude (2 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -76,7 +76,7 @@
 			"uuid": "35afe3dac3915b2746b936baa58e71e981fee68a7afe9cd6d5d93ed40fb2dd20",
 			"gcp_id": "GCP.INDEX.IR",
 			"name": "IR",
-			"latex": "IR",
+			"latex": "ir",
 			"description": "GCP Impact Regions",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -85,7 +85,7 @@
 			"uuid": "42f0a886ae9c59f320c644ddd9b763332660e1cfe15f7a763111dc488321f184",
 			"gcp_id": "GCP.INDEX.Gadm",
 			"name": "Gadm",
-			"latex": "Gadm",
+			"latex": "gadm",
 			"description": "Global Administrative Database (GADM) Regions",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -94,7 +94,7 @@
 			"uuid": "6791ad5aaae4c39af100c95914be628893a387159e59e8bc34785f2a4d10a516",
 			"gcp_id": "GCP.INDEX.Day",
 			"name": "Day",
-			"latex": "Day",
+			"latex": "day",
 			"description": "Days since 1980 (January 1, 1980 = 0)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -103,7 +103,7 @@
 			"uuid": "cff07182cbb8dae993ea0791e534425535666b3c6ec462faf9ccadf4ab9b4a35",
 			"gcp_id": "GCP.INDEX.Day365",
 			"name": "Day365",
-			"latex": "Day365",
+			"latex": "day",
 			"description": "Days since 1980, 365 day calendar (January 1, 1980 = 0)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -112,7 +112,7 @@
 			"uuid": "aef6ee91f5a26c1440f6115ebf1d28f012dead8d43e38265d0099b4d58d36eb7",
 			"gcp_id": "GCP.INDEX.Month",
 			"name": "Month",
-			"latex": "Month",
+			"latex": "month",
 			"description": "Months since 1980 (January 1980 = 0)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -121,7 +121,7 @@
 			"uuid": "84d638ee6ae9903388cae56236b9cc008535513b2fc849680e4ec92e62e02834",
 			"gcp_id": "GCP.INDEX.Year",
 			"name": "Year",
-			"latex": "Year",
+			"latex": "year",
 			"description": "Years since 1980 (1980 = 0)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -130,7 +130,7 @@
 			"uuid": "bded400028ea063447bf8a81e00c99bb019bfb7aae90add945f905565fe322a0",
 			"gcp_id": "GCP.INDEX.HistoricalPeriod",
 			"name": "HistoricalPeriod",
-			"latex": "HistoricalPeriod",
+			"latex": "per",
 			"description": "GCP Historical Period (1981-2010)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -139,7 +139,7 @@
 			"uuid": "cf57e612a8fa5bf8de1841036f6b7b193b7d1ce24785a0515b8be44b6c866dea",
 			"gcp_id": "GCP.INDEX.ProjectionPeriods",
 			"name": "ProjectionPeriods",
-			"latex": "ProjectionPeriods",
+			"latex": "per",
 			"description": "GCP Projection Periods (2020-2039, 2040-2059, 2060-2079, 2080-2099)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
@@ -148,7 +148,7 @@
 			"uuid": "42eec78de704f14f7ea592e559ef4d32d91e3b08c24b06687db5e4323148f8be",
 			"gcp_id": "GCP.INDEX.TempBinMortality",
 			"name": "TempBinMortality",
-			"latex": "TempBinMortality",
+			"latex": "temp",
 			"description": "Temperature bins for mortality",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"

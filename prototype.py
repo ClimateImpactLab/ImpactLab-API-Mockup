@@ -5,8 +5,9 @@
 	
 import xarray as xr, pandas as pd, numpy as np
 import json, numpy, hashlib
-from IPython.display import display, Markdown, Latex
-
+from IPython import get_ipython
+from IPython.display import display, Markdown, Latex, FileLink
+import ipywidgets.widgets as widgets
 
 class Variable(object):
 	'''
@@ -60,6 +61,13 @@ class Variable(object):
 	def symbol(self, value):
 		self.attrs['latex'] = value
 
+	@property
+	def attrs(self):
+		return self.value.attrs
+
+	@attrs.setter
+	def attrs(self, value):
+		self.value.attrs = value
 
 	@property
 	def symbolic(self):
@@ -151,13 +159,17 @@ class Variable(object):
 		return self.attrs['latex'] + '_{{{}}}'.format(','.join(self.value.dims))
 
 	def equation(self):
-		return '{} = {}'.format(self.get_symbol(), self.symbolic)
+		try:
+			symbol = self.symbol + '_{{{}}}'.format(','.join(self.value.dims)) + ' = '
+		except:
+			symbol = ''
+		return '{}{}'.format(symbol, self.symbolic)
     
 	def display(self):
-		if in_ipynb():
-			display(Latex('\\begin{{equation}}\n{}\n\\end{{equation}}'.format(self.equation())))
-		else:
-			return '${}$'.format(self.equation())
+		# if in_ipynb():
+		display(Latex('\\begin{{equation}}\n{}\n\\end{{equation}}'.format(self.equation())))
+		# else:
+			# return '${}$'.format(self.equation())
 
 	def compute(self):
 		'''
@@ -183,31 +195,33 @@ def in_ipynb():
 
 def require(*kwargs):
 	def get_decorator(func):
-		def do_func(**kwds):
+		def do_func(obj, var, **kwds):
 			for kw in kwargs:
-				if kw in kwds:
-					arg = kwds[kw]
-				else:
-					if in_ipynb():
-						# wigit code
-						pass
-					else:
-						arg = raw_input(kw)
-				kwargs[kw] = arg
+				if kw not in kwds:
+					# if in_ipynb():
+					# 	widgets.widget_string.Text()
+					# else:
+					arg = raw_input('{}: '.format(kw))
+				kwds[kw] = arg
 
-			func(**kwargs)
+			func(obj, var, **kwds)
 		return do_func
 	return get_decorator
+
 
 class ClimateImpactLabDataAPI(object):
 	'''
 	Implements the interface for Climate Impact Lab users
 	'''
 
-	def __init__(self, *args, **kwargs):
-		self._populate_random_data()
+	REQUIRED = ['gcp_id','name','latex','description','author']
+	''' Required list of variable arguments '''
 
-	def _populate_random_data(self):
+	def __init__(self, *args, **kwargs):
+		self._read_json_database()
+
+
+	def _read_json_database(self):
 		'''
 		Provides dummy versions of the variables we need for this demo
 
@@ -224,11 +238,11 @@ class ClimateImpactLabDataAPI(object):
 			ds = json.loads(fp.read())
 
 		for dim in ds['dims']:
-			dims[dim] = [0]
+			dims[dim] = ds['dims'][dim]
 
 		for var in ds['variables']:
-			data = np.ones(tuple([1 for d in ds['variables'][var]['dims']]))
-			coords = [(d['name'], dims[d['gcp_id']]) for d in ds['variables'][var]['dims']]
+			data = np.ones(tuple([len(d.get('values', [0])) for d in ds['variables'][var]['dims']]))
+			coords = [(dims[d['gcp_id']]['latex'], d.get('values', [0])) for d in ds['variables'][var]['dims']]
 
 			self.database[var] = Variable(xr.DataArray(data, coords=coords, attrs = ds['variables'][var]))
 			self.database[var].value = self.database[var].value.chunk(tuple([1 for d in ds['variables'][var]['dims']]))
@@ -236,24 +250,28 @@ class ClimateImpactLabDataAPI(object):
 			self.database[var].latest = sorted(ds['variables'][var]['versions'].items(), key=lambda x: x[0])[0]
 
 
-	@require('gcp_id','name','latex','description','author','updated')
-	def publish(self, gcp_id, name, latex, description, author, updated):
+	def publish(self, variable, **kwargs):
 
 		with open('database.json', 'r') as fp:
 			ds = json.loads(fp.read())
 
+		if 'gcp_id' in variable.attrs:
+			gcp_id = variable.attrs['gcp_id']
+		else:
+			gcp_id = raw_input('{}: '.format('gcp_id'))
+			variable.attrs['gcp_id'] = gcp_id
+
 		if gcp_id in ds:
 			raise KeyError('{} already in dataset'.format(gcp_id))
 
-		ds[gcp_id] = {
-			'uuid': hashlib.sha256(np.random.random()).hexdigest(),
-			'gcp_id': gcp_id,
-			'name': name,
-			'latex': latex,
-			'description': description,
-			'author': author,
-			'updated': updated
+		ds['variables'][gcp_id] = {
+			'uuid': hashlib.sha256(str(np.random.random())).hexdigest(),
+			'updated': pd.datetime.now().strftime('%c')
+			'dims': [{'name': ds['dims'][d][]}]
 		}
+
+		for attr in self.REQUIRED:
+			ds['variables'][gcp_id][attr] = kwargs.get(attr, variable.attrs.get(attr, raw_input('{}: '.format(attr))))
 
 		with open('database.json', 'w+') as fp:
 			fp.write(json.dumps(ds, sort_keys=True, indent=4))
