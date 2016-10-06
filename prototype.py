@@ -28,12 +28,13 @@ class Variable(object):
 	this configuration should work.
 
 	'''
-	def __init__(self, value, symbolic=None):
+	def __init__(self, api, value, symbolic=None):
+		self.api = api
 		self.value=value
 
 		if symbolic is None:
 			if hasattr(value, 'attrs'):
-				symbolic = value.attrs['latex'] + '_{{{}}}'.format(','.join(value.dims))
+				symbolic = value.attrs['latex'] + self.get_latex_dims()
 			else:
 				symbolic = str(value)
 
@@ -43,10 +44,9 @@ class Variable(object):
 	def __repr__(self):
 		return self.value.__repr__()
 
-	@staticmethod
-	def _coerce(value):
+	def _coerce(self, value):
 		if not isinstance(value, Variable):
-			return Variable(value)
+			return Variable(self.api, value)
 		return value
 
 	@property
@@ -76,17 +76,17 @@ class Variable(object):
 
 	@symbolic.setter
 	def symbolic(self, value):
-		 self._symbolic = '{}_{{{}}}'.format(value, ','.join(self.value.dims))
+		 self._symbolic = '{}{}'.format(value, self.get_latex_dims())
 
 
 	def __add__(self, other):
 		other = self._coerce(other)
-		return Variable(self.value + other.value, '{} + {}'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value + other.value, '{} + {}'.format(self.symbolic, other.symbolic))
 
 
 	def __radd__(self, other):
 		other = self._coerce(other)
-		return Variable(other.value + self.value, '{} + {}'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value + self.value, '{} + {}'.format(other.symbolic, self.symbolic))
 
 
 	def __iadd__(self, other):
@@ -95,12 +95,12 @@ class Variable(object):
 
 	def __sub__(self, other):
 		other = self._coerce(other)
-		return Variable(self.value - other.value, '{} - {}'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value - other.value, '{} - {}'.format(self.symbolic, other.symbolic))
 
 
 	def __rsub__(self, other):
 		other = self._coerce(other)
-		return Variable(other.value - self.value, '{} - {}'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value - self.value, '{} - {}'.format(other.symbolic, self.symbolic))
 
 
 	def __isub__(self, other):
@@ -109,12 +109,12 @@ class Variable(object):
 
 	def __mul__(self, other):
 		other = self._coerce(other)
-		return Variable(self.value * other.value, '\\left({}\\right)\\left({}\\right)'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value * other.value, '\\left({}\\right)\\left({}\\right)'.format(self.symbolic, other.symbolic))
 
 
 	def __rmul__(self, other):
 		other = self._coerce(other)
-		return Variable(other.value * self.value, '\\left({}\\right)\\left({}\\right)'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value * self.value, '\\left({}\\right)\\left({}\\right)'.format(other.symbolic, self.symbolic))
 
 
 	def __imul__(self, other):
@@ -123,12 +123,12 @@ class Variable(object):
 
 	def __div__(self, other):
 		other = self._coerce(other)
-		return Variable(self.value / other.value, '\\frac{{\\left({}\\right)}}{{\\left({}\\right)}}'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value / other.value, '\\frac{{\\left({}\\right)}}{{\\left({}\\right)}}'.format(self.symbolic, other.symbolic))
 
 
 	def __rdiv__(self, other):
 		other = self._coerce(other)
-		return Variable(other.value / self.value, '\\frac{{\\left({}\\right)}}{{\\left({}\\right)}}'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value / self.value, '\\frac{{\\left({}\\right)}}{{\\left({}\\right)}}'.format(other.symbolic, self.symbolic))
 
 
 	def __idiv__(self, other):
@@ -137,12 +137,12 @@ class Variable(object):
 
 	def __pow__(self, other):
 		other = self._coerce(other)
-		return Variable(self.value ** other.value, '{{\\left({}\\right)}}^{{\\left({}\\right)}}'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value ** other.value, '{{\\left({}\\right)}}^{{\\left({}\\right)}}'.format(self.symbolic, other.symbolic))
 
 
 	def __rpow__(self, other):
 		other = self._coerce(other)
-		return Variable(other.value ** self.value, '{{\\left({}\\right)}}^{{\\left({}\\right)}}'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value ** self.value, '{{\\left({}\\right)}}^{{\\left({}\\right)}}'.format(other.symbolic, self.symbolic))
 
 
 	def __ipow__(self, other):
@@ -150,17 +150,20 @@ class Variable(object):
 
 
 	def sum(self, dim=None):
-		return Variable(self.value.sum(dim=dim), '\\sum{}{{\\left\\{{{}\\right\\}}}}'.format(('_{{{}\in {}}}'.format(dim, dim.upper()) if dim is not None else ''), self.symbolic))
+		return Variable(self.api, self.value.sum(dim=dim), '\\sum{}{{\\left\\{{{}\\right\\}}}}'.format(('_{{{}\in {}}}'.format(dim, dim.upper()) if dim is not None else ''), self.symbolic))
 
 	def ln(self):
-		return Variable(np.log(self.value), '\\ln{{\\left({}\\right)}}'.format(self.symbolic))
+		return Variable(self.api, np.log(self.value), '\\ln{{\\left({}\\right)}}'.format(self.symbolic))
 
 	def get_symbol(self):
-		return self.attrs['latex'] + '_{{{}}}'.format(','.join(self.value.dims))
+		return self.attrs['latex'] + self.get_latex_dims()
+
+	def get_latex_dims(self):
+		return '_{{{}}}'.format(','.join(map(lambda d: self.api.dims[d]['latex'], self.value.dims)))
 
 	def equation(self):
 		try:
-			symbol = self.symbol + '_{{{}}}'.format(','.join(self.value.dims)) + ' = '
+			symbol = self.symbol + self.get_latex_dims() + ' = '
 		except:
 			symbol = ''
 		return '{}{}'.format(symbol, self.symbolic)
@@ -231,20 +234,18 @@ class ClimateImpactLabDataAPI(object):
 		climate variables will also be indexed by climate model.
 		'''
 
-		dims = {}
 		self.database = {}
 
 		with open('database.json', 'r') as fp:
 			ds = json.loads(fp.read())
 
-		for dim in ds['dims']:
-			dims[dim] = ds['dims'][dim]
+		self.dims = ds['dims']
 
 		for var in ds['variables']:
 			data = np.ones(tuple([len(d.get('values', [0])) for d in ds['variables'][var]['dims']]))
-			coords = [(dims[d['gcp_id']]['latex'], d.get('values', [0])) for d in ds['variables'][var]['dims']]
+			coords = [(ds['dims'][d['gcp_id']]['gcp_id'], d.get('values', [0])) for d in ds['variables'][var]['dims']]
 
-			self.database[var] = Variable(xr.DataArray(data, coords=coords, attrs = ds['variables'][var]))
+			self.database[var] = Variable(self, xr.DataArray(data, coords=coords, attrs = ds['variables'][var]))
 			self.database[var].value = self.database[var].value.chunk(tuple([1 for d in ds['variables'][var]['dims']]))
 			
 			self.database[var].latest = sorted(ds['variables'][var]['versions'].items(), key=lambda x: x[0])[0]
@@ -266,8 +267,8 @@ class ClimateImpactLabDataAPI(object):
 
 		ds['variables'][gcp_id] = {
 			'uuid': hashlib.sha256(str(np.random.random())).hexdigest(),
-			'updated': pd.datetime.now().strftime('%c')
-			'dims': [{'name': ds['dims'][d][]}]
+			'updated': pd.datetime.now().strftime('%c'),
+			'dims': [{'name': ds['dims'][d]['name'], 'gcp_id': ds['dims'][d]['gcp_id']} for d in variable.dims]
 		}
 
 		for attr in self.REQUIRED:
@@ -282,6 +283,12 @@ class ClimateImpactLabDataAPI(object):
 		'''
 
 		return self.database[varname]
+
+	def list_variables(self):
+		return sorted(self.database.keys())
+
+	def list_dims(self):
+		return sorted(self.dims.keys())
 
 	def configure(self, *args, **kwargs):
 		print('API configuration updated')
