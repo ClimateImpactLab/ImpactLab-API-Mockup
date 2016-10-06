@@ -165,7 +165,7 @@ class Variable(object):
 def get_random_variable(dims):
 	data = np.random.random(tuple([len(d[1]) for d in dims]))
 	foo = xr.DataArray(data, coords=dims)
-	return foo
+	return foo.chunk(tuple(foo.shape))
 
 
 class ClimateImpactLabDataAPI(object):
@@ -186,9 +186,9 @@ class ClimateImpactLabDataAPI(object):
 		climate variables will also be indexed by climate model.
 		'''
 
-		adm2 = range(1,25000)
-		bins = range(12)
-		time = range(100)
+		adm2 = range(1)
+		bins = range(1)
+		time = range(1)
 
 		self.temp = get_random_variable(dims=[('bins', bins), ('adm2', adm2), ('time', time)])
 		self.temp.attrs['symbol'] = 'T'

@@ -1,152 +1,152 @@
 {
 	"dims": {
-		"GCP_INDEX_LatQtrDeg": {
+		"GCP.INDEX.LatQtrDeg": {
 			"uuid": "fdece8e75deb321420ca6f200342bd5ef58ca082ec0750ae624023ffe7cde7ec",
-			"gcp_id": "GCP_INDEX_LatQtrDeg",
+			"gcp_id": "GCP.INDEX.LatQtrDeg",
 			"name": "LatQtrDeg",
 			"latex": "LatQtrDeg",
 			"description": "Latitude (1/4 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_LonQtrDeg": {
+		"GCP.INDEX.LonQtrDeg": {
 			"uuid": "ee0f2f97db0a29c57832186ffaf785856319feeaf8fa123a66861ac32d41c91b",
-			"gcp_id": "GCP_INDEX_LonQtrDeg",
+			"gcp_id": "GCP.INDEX.LonQtrDeg",
 			"name": "LonQtrDeg",
 			"latex": "LonQtrDeg",
 			"description": "Longitude (1/4 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_LatHalfDeg": {
+		"GCP.INDEX.LatHalfDeg": {
 			"uuid": "986bdb23961ae70b1e6d90b39559e648dae896de00491c2053ced22c1289f489",
-			"gcp_id": "GCP_INDEX_LatHalfDeg",
+			"gcp_id": "GCP.INDEX.LatHalfDeg",
 			"name": "LatHalfDeg",
 			"latex": "LatHalfDeg",
 			"description": "Latitude (1/2 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_LonHalfDeg": {
+		"GCP.INDEX.LonHalfDeg": {
 			"uuid": "17f1bd3fd47565c3bc8fc71413d71a4d90737df5500e26d71db8483fcf281357",
-			"gcp_id": "GCP_INDEX_LonHalfDeg",
+			"gcp_id": "GCP.INDEX.LonHalfDeg",
 			"name": "LonHalfDeg",
 			"latex": "LonHalfDeg",
 			"description": "Longitude (1/2 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_LatDEG": {
+		"GCP.INDEX.LatDEG": {
 			"uuid": "304af8f327e144e29680fb6e0c168c0a85a97a2e5d84bd0f01fe7d596cbdfd12",
-			"gcp_id": "GCP_INDEX_LatDEG",
+			"gcp_id": "GCP.INDEX.LatDEG",
 			"name": "LatDEG",
 			"latex": "LatDEG",
 			"description": "Latitude (1 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_LonDEG": {
+		"GCP.INDEX.LonDEG": {
 			"uuid": "ea19fb05646e9986e0644b628f0976ff31a796be1bc4ad86690cc4a0ac8df2da",
-			"gcp_id": "GCP_INDEX_LonDEG",
+			"gcp_id": "GCP.INDEX.LonDEG",
 			"name": "LonDEG",
 			"latex": "LonDEG",
 			"description": "Longitude (1 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_LatTwoDeg": {
+		"GCP.INDEX.LatTwoDeg": {
 			"uuid": "83ad20c00ed941707821f73905076e7636566e69a48e5a00b1664b5bb08de91c",
-			"gcp_id": "GCP_INDEX_LatTwoDeg",
+			"gcp_id": "GCP.INDEX.LatTwoDeg",
 			"name": "LatTwoDeg",
 			"latex": "LatTwoDeg",
 			"description": "Latitude (2 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_LonTwoDeg": {
+		"GCP.INDEX.LonTwoDeg": {
 			"uuid": "7758b87bf81facd0d6f0faccff7c8eb29db772deda5c60464db67e42ccff4da8",
-			"gcp_id": "GCP_INDEX_LonTwoDeg",
+			"gcp_id": "GCP.INDEX.LonTwoDeg",
 			"name": "LonTwoDeg",
 			"latex": "LonTwoDeg",
 			"description": "Longitude (2 Degree Grid)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_IR": {
+		"GCP.INDEX.IR": {
 			"uuid": "35afe3dac3915b2746b936baa58e71e981fee68a7afe9cd6d5d93ed40fb2dd20",
-			"gcp_id": "GCP_INDEX_IR",
+			"gcp_id": "GCP.INDEX.IR",
 			"name": "IR",
 			"latex": "IR",
 			"description": "GCP Impact Regions",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_Gadm": {
+		"GCP.INDEX.Gadm": {
 			"uuid": "42f0a886ae9c59f320c644ddd9b763332660e1cfe15f7a763111dc488321f184",
-			"gcp_id": "GCP_INDEX_Gadm",
+			"gcp_id": "GCP.INDEX.Gadm",
 			"name": "Gadm",
 			"latex": "Gadm",
 			"description": "Global Administrative Database (GADM) Regions",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_Day": {
+		"GCP.INDEX.Day": {
 			"uuid": "6791ad5aaae4c39af100c95914be628893a387159e59e8bc34785f2a4d10a516",
-			"gcp_id": "GCP_INDEX_Day",
+			"gcp_id": "GCP.INDEX.Day",
 			"name": "Day",
 			"latex": "Day",
 			"description": "Days since 1980 (January 1, 1980 = 0)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_Day365": {
+		"GCP.INDEX.Day365": {
 			"uuid": "cff07182cbb8dae993ea0791e534425535666b3c6ec462faf9ccadf4ab9b4a35",
-			"gcp_id": "GCP_INDEX_Day365",
+			"gcp_id": "GCP.INDEX.Day365",
 			"name": "Day365",
 			"latex": "Day365",
 			"description": "Days since 1980, 365 day calendar (January 1, 1980 = 0)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_Month": {
+		"GCP.INDEX.Month": {
 			"uuid": "aef6ee91f5a26c1440f6115ebf1d28f012dead8d43e38265d0099b4d58d36eb7",
-			"gcp_id": "GCP_INDEX_Month",
+			"gcp_id": "GCP.INDEX.Month",
 			"name": "Month",
 			"latex": "Month",
 			"description": "Months since 1980 (January 1980 = 0)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_Year": {
+		"GCP.INDEX.Year": {
 			"uuid": "84d638ee6ae9903388cae56236b9cc008535513b2fc849680e4ec92e62e02834",
-			"gcp_id": "GCP_INDEX_Year",
+			"gcp_id": "GCP.INDEX.Year",
 			"name": "Year",
 			"latex": "Year",
 			"description": "Years since 1980 (1980 = 0)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_HistoricalPeriod": {
+		"GCP.INDEX.HistoricalPeriod": {
 			"uuid": "bded400028ea063447bf8a81e00c99bb019bfb7aae90add945f905565fe322a0",
-			"gcp_id": "GCP_INDEX_HistoricalPeriod",
+			"gcp_id": "GCP.INDEX.HistoricalPeriod",
 			"name": "HistoricalPeriod",
 			"latex": "HistoricalPeriod",
 			"description": "GCP Historical Period (1981-2010)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_ProjectionPeriods": {
+		"GCP.INDEX.ProjectionPeriods": {
 			"uuid": "cf57e612a8fa5bf8de1841036f6b7b193b7d1ce24785a0515b8be44b6c866dea",
-			"gcp_id": "GCP_INDEX_ProjectionPeriods",
+			"gcp_id": "GCP.INDEX.ProjectionPeriods",
 			"name": "ProjectionPeriods",
 			"latex": "ProjectionPeriods",
 			"description": "GCP Projection Periods (2020-2039, 2040-2059, 2060-2079, 2080-2099)",
 			"author": "Michael Delgado",
 			"updated": "2016-10-02"
 		},
-		"GCP_INDEX_TempBinMortality": {
+		"GCP.INDEX.TempBinMortality": {
 			"uuid": "42eec78de704f14f7ea592e559ef4d32d91e3b08c24b06687db5e4323148f8be",
-			"gcp_id": "GCP_INDEX_TempBinMortality",
+			"gcp_id": "GCP.INDEX.TempBinMortality",
 			"name": "TempBinMortality",
 			"latex": "TempBinMortality",
 			"description": "Temperature bins for mortality",
@@ -155,307 +155,353 @@
 		}
 	},
 	"variables": {
-		"GCP_CLIMATE_Tas_QtrDeg": {
-			"uuid": "ef95368cac142425e6c0e74324f7e9c7eeb04f78f863f68dfb4c3213c8ee2734",
-			"gcp_id": "GCP_CLIMATE_Tas_QtrDeg",
-			"name": "Tas_QtrDeg",
+		"GCP.Climate.Projection.GridQtrDeg.Tasmin": {
+			"uuid": "",
+			"gcp_id": "GCP.Climate.Projection.GridQtrDeg.Tasmin",
+			"name": "GridQtrDeg.Tasmin",
+			"project": "GCP",
+			"category": "Climate.Projection",
+			"code_name": "tasmin",
 			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_LatQtrDeg", "GCP_INDEX_LonQtrDeg", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
+			"description": "Gridded daily minimum near-surface air temperature",
+			"units": "K",
+			"author": "Jiacan Yuan",
+			"contact": "jiacan.yuan@gmail.com",
+			"updated": "2015-01-07T19:09:48Z",
+			"additional_metadata": {
+				"parent_experiment": "historical",
+				"parent_experiment_id": "historical",
+				"parent_experiment_rip": "r1i1p1",
+				"Conventions": "CF-1.4",
+				"institution": "NASA Earth Exchange, NASA Ames Research Center, Moffett Field, CA 94035",
+				"institute_id": "NASA-Ames",
+				"realm": "atmos",
+				"modeling_realm": "atmos",
+				"version": "1.0",
+				"downscalingModel": "BCSD",
+				"experiment_id": "rcp85",
+				"frequency": "day",
+				"realization": "1",
+				"initialization_method": "1",
+				"physics_version": "1",
+				"tracking_id": "ac8bb88b-f1d9-4609-9c57-ae2e3988bdae",
+				"driving_data_tracking_ids": "N/A",
+				"driving_model_ensemble_member": "r1i1p1",
+				"driving_experiment_name": "historical",
+				"driving_experiment": "historical",
+				"references": "BCSD method: Thrasher et al., 2012, Hydrol. Earth Syst. Sci.,16, 3309-3314. Ref period obs: latest version of the Princeton Global Meteorological Forcings (http://hydrology.princeton.edu/data.php), based on Sheffield et al., 2006, J. Climate, 19 (13), 3088-3111. DOI: http://dx.doi.org/10.7292/W0MW2F2G",
+				"contact": "Dr. Rama Nemani: rama.nemani@nasa.gov, Dr. Bridget Thrasher: bridget@climateanalyticsgroup.org",
+				"disclaimer": "This data is considered provisional and subject to change. This data is provided as is without any warranty of any kind, either express or implied, arising by law or otherwise, including but not limited to warranties of completeness, non-infringement, accuracy, merchantability, or fitness for a particular purpose. The user assumes all risk associated with the use of, or inability to use, this data.",
+				"resolution_id": "0.25 degree",
+				"project_id": "NEXGDDP",
+				"table_id": "Table day (12 November 2010)",
+				"source": "BCSD 2014",
+				"forcing": "N/A",
+				"product": "output",
+			},
+			"dims": [
+				{"name": "lat", "gcp_id": "GCP.INDEX.LatQtrDeg"}, 
+				{"name": "lon", "gcp_id": "GCP.INDEX.LonQtrDeg"}, 
+				{"name": "time", "gcp_id": "GCP.INDEX.Day"}
+			],
+			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
+			"versions": {
+				"GCP.Climate.Projection.GridQtrDeg.Tasmin.2015-01-07": {
+					"uuid": "",
+					"version": "GCP.Climate.Projection.GridQtrDeg.Tasmin.2015-01-07",
+					"updated": "2016-03-10",
+					"dependencies": [],
+					"filepath": "shackleton:/mnt/norgay_gcp/BCSD-original/{{rcp}}/day/atmos/{{code_name}}/r1i1p1/v1.0/{{code_name}}_day_BCSD_{{rcp}}r1i1p1_{{model}}_*.nc"
+				}
+			}
 		},
-		"GCP_CLIMATE_Tmax_QtrDeg": {
-			"uuid": "4695db7e4a22c960f0c4a4410582f66f2575291b1d9084373e2584473366bed0",
-			"gcp_id": "GCP_CLIMATE_Tmax_QtrDeg",
-			"name": "Tmax_QtrDeg",
+		"GCP.Climate.Projection.GridQtrDeg.Tasmax": {
+			"uuid": "",
+			"gcp_id": "GCP.Climate.Projection.GridQtrDeg.Tasmax",
+			"name": "GridQtrDeg.Tasmax",
+			"project": "GCP",
+			"category": "Climate.Projection",
+			"code_name": "tasmax",
 			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_LatQtrDeg", "GCP_INDEX_LonQtrDeg", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
+			"description": "Gridded daily maximum near-surface air temperature",
+			"units": "K",
+			"author": "Jiacan Yuan",
+			"contact": "jiacan.yuan@gmail.com",
+			"updated": "2015-01-07",
+			"additional_metadata": {
+				"parent_experiment": "historical",
+				"parent_experiment_id": "historical",
+				"parent_experiment_rip": "r1i1p1",
+				"Conventions": "CF-1.4",
+				"institution": "NASA Earth Exchange, NASA Ames Research Center, Moffett Field, CA 94035",
+				"institute_id": "NASA-Ames",
+				"realm": "atmos",
+				"modeling_realm": "atmos",
+				"version": "1.0",
+				"downscalingModel": "BCSD",
+				"experiment_id": "rcp85",
+				"frequency": "day",
+				"realization": "1",
+				"initialization_method": "1",
+				"physics_version": "1",
+				"tracking_id": "ac8bb88b-f1d9-4609-9c57-ae2e3988bdae",
+				"driving_data_tracking_ids": "N/A",
+				"driving_model_ensemble_member": "r1i1p1",
+				"driving_experiment_name": "historical",
+				"driving_experiment": "historical",
+				"references": "BCSD method: Thrasher et al., 2012, Hydrol. Earth Syst. Sci.,16, 3309-3314. Ref period obs: latest version of the Princeton Global Meteorological Forcings (http://hydrology.princeton.edu/data.php), based on Sheffield et al., 2006, J. Climate, 19 (13), 3088-3111. DOI: http://dx.doi.org/10.7292/W0MW2F2G",
+				"contact": "Dr. Rama Nemani: rama.nemani@nasa.gov, Dr. Bridget Thrasher: bridget@climateanalyticsgroup.org",
+				"disclaimer": "This data is considered provisional and subject to change. This data is provided as is without any warranty of any kind, either express or implied, arising by law or otherwise, including but not limited to warranties of completeness, non-infringement, accuracy, merchantability, or fitness for a particular purpose. The user assumes all risk associated with the use of, or inability to use, this data.",
+				"resolution_id": "0.25 degree",
+				"project_id": "NEXGDDP",
+				"table_id": "Table day (12 November 2010)",
+				"source": "BCSD 2014",
+				"forcing": "N/A",
+				"product": "output",
+			},
+			"dims": [
+				{"name": "lat", "gcp_id": "GCP.INDEX.LatQtrDeg"}, 
+				{"name": "lon", "gcp_id": "GCP.INDEX.LonQtrDeg"}, 
+				{"name": "time", "gcp_id": "GCP.INDEX.Day"}
+			],
+			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
+			"versions": {
+				"GCP.Climate.Projection.GridQtrDeg.Tasmax.2015-01-07": {
+					"uuid": "",
+					"version": "GCP.Climate.Projection.GridQtrDeg.Tasax.2015-01-07",
+					"updated": "2016-03-10",
+					"dependencies": [],
+					"filepath": "shackleton:/mnt/norgay_gcp/BCSD-original/{{rcp}}/day/atmos/{{code_name}}/r1i1p1/v1.0/{{code_name}}_day_BCSD_{{rcp}}r1i1p1_{{model}}_*.nc"
+				}
+			}
 		},
-		"GCP_CLIMATE_Tmin_QtrDeg": {
-			"uuid": "08ce20d150c022eb5f442bbb30f6bd554ed51daad18ac54c7d9d4f529281044c",
-			"gcp_id": "GCP_CLIMATE_Tmin_QtrDeg",
-			"name": "Tmin_QtrDeg",
+		"GCP.Climate.Projection.GridQtrDeg.Precipitation": {
+			"uuid": "",
+			"gcp_id": "GCP.Climate.Projection.GridQtrDeg.Precipitation",
+			"name": "GridQtrDeg.Precipitation",
+			"project": "GCP",
+			"category": "Climate.Projection",
+			"code_name": "pr",
+			"latex": "P",
+			"description": "Gridded daily precipitation flux at surface; includes both liquid and solid phases from all types of clouds (both large-scale and convective)",
+			"units": "kg m-2 s-1",
+			"author": "Jiacan Yuan",
+			"contact": "jiacan.yuan@gmail.com",
+			"updated": "2015-05-22",
+			"additional_metadata": {
+				"parent_experiment": "historical",
+				"parent_experiment_id": "historical",
+				"parent_experiment_rip": "r1i1p1",
+				"Conventions": "CF-1.4",
+				"project_id": "NEXGDDP",
+				"product": "output",
+				"institution": "NASA Earth Exchange, NASA Ames Research Center, Moffett Field, CA 94035",
+				"institute_id": "NASA-Ames",
+				"realm": "atmos",
+				"modeling_realm": "atmos",
+				"version": "1.0",
+				"downscalingModel": "BCSD",
+				"experiment_id": "rcp85",
+				"frequency": "day",
+				"table_id": "Table day (12 November 2010)",
+				"forcing": "N/A",
+				"source": "BCSD 2014",
+				"realization": "1",
+				"initialization_method": "1",
+				"physics_version": "1",
+				"tracking_id": "1e69247f-ca43-4078-8e0b-bc7b179c4d4d",
+				"driving_data_tracking_ids": "N/A",
+				"driving_model_ensemble_member": "r1i1p1",
+				"driving_experiment_name": "historical",
+				"driving_experiment": "historical",
+				"model_id": "BCSD",
+				"references": "BCSD method: Thrasher et al., 2012, Hydrol. Earth Syst. Sci.,16, 3309-3314. Ref period obs: latest version of the Princeton Global Meteorological Forcings (http://hydrology.princeton.edu/data.php), based on Sheffield et al., 2006, J. Climate, 19 (13), 3088-3111. DOI: http://dx.doi.org/10.7292/W0MW2F2G",
+				"experiment": "RCP8.5",
+				"contact": "Dr. Rama Nemani: rama.nemani@nasa.gov, Dr. Bridget Thrasher: bridget@climateanalyticsgroup.org",
+				"disclaimer": "This data is considered provisional and subject to change. This data is provided as is without any warranty of any kind, either express or implied, arising by law or otherwise, including but not limited to warranties of completeness, non-infringement, accuracy, merchantability, or fitness for a particular purpose. The user assumes all risk associated with the use of, or inability to use, this data.",
+				"resolution_id": "0.25 degree"
+			},
+			"dims": [
+				{"name": "lat", "gcp_id": "GCP.INDEX.LatQtrDeg"}, 
+				{"name": "lon", "gcp_id": "GCP.INDEX.LonQtrDeg"}, 
+				{"name": "time", "gcp_id": "GCP.INDEX.Day"}
+			],
+			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
+			"versions": {
+				"GCP.Climate.Projection.GridQtrDeg.Precipitation.2015-05-22": {
+					"uuid": "",
+					"version": "GCP.Climate.Projection.GridQtrDeg.Precipitation.2015-05-22",
+					"updated": "2016-03-10",
+					"dependencies": [],
+					"filepath": "shackleton:/mnt/norgay_gcp/BCSD-original/{{rcp}}/day/atmos/{{code_name}}/r1i1p1/v1.0/{{code_name}}_day_BCSD_{{rcp}}r1i1p1_{{model}}_*.nc"
+				}
+			}
+		},
+		"GCP.Climate.Projection.GridQtrDeg.Tas": {
+			"uuid": "",
+			"gcp_id": "GCP.Climate.Projection.GridQtrDeg.Tas",
+			"name": "GridQtrDeg.Tas",
+			"project": "GCP",
+			"category": "Climate.Projection",
+			"code_name": "tas",
 			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_LatQtrDeg", "GCP_INDEX_LonQtrDeg", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
+			"description": "Gridded daily mean near-surface air temperature",
+			"source": "Average temperature is the average of daily minimum and maximum temperature",
+			"units": "K",
+			"author": "Jiacan Yuan",
+			"contact": "jiacan.yuan@gmail.com",
+			"updated": "2016-03-10",
+			"dims": [
+				{"name": "lat", "gcp_id": "GCP.INDEX.LatQtrDeg"}, 
+				{"name": "lon", "gcp_id": "GCP.INDEX.LonQtrDeg"}, 
+				{"name": "time", "gcp_id": "GCP.INDEX.Day365"}
+			],
+			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
+			"versions": {
+				"GCP.Climate.Projection.GridQtrDeg.Tas.2016-03-10.01": {
+					"uuid": "",
+					"version": "GCP.Climate.Projection.GridQtrDeg.Tas.2016-03-10.01",
+					"updated": "2016-03-10",
+					"dependencies": ["GCP.Climate.Projection.GridQtrDeg.Tasmax.2015-01-07", "GCP.Climate.Projection.GridQtrDeg.Tasmin.2015-01-07"],
+					"filepath": "shackleton:/mnt/norgay_gcp/BCSD-original/{{rcp}}/day/atmos/{{code_name}}/r1i1p1/v1.0/{{code_name}}_day_BCSD_{{rcp}}r1i1p1_{{model}}_*.nc"
+				}
+			}
 		},
-		"GCP_CLIMATE_Tas_IR_Poppop": {
-			"uuid": "a1d987cc343daf197c4b119bfc722723a289cb0ebfc0ffd0b2c2e3bb8d60096c",
-			"gcp_id": "GCP_CLIMATE_Tas_IR_Poppop",
-			"name": "Tas_IR_Poppop",
+		"GCP.Climate.Projection.IR.Tas": {
+			"uuid": "",
+			"gcp_id": "GCP.Climate.Projection.IR.Tas",
+			"name": "Tas",
+			"project": "GCP",
+			"category": "Climate.Projection",
+			"code_name": "tas",
 			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
+			"description": "Daily mean near-surface air temperature aggregated to GCP impact regions using spatial weighting",
+			"units": "Celsius",
+			"author": "Jiacan Yuan",
+			"contact": "jiacan.yuan@gmail.com",
+			"updated": "2016-03-10",
+			"dims": ["GCP.INDEX.IR", "GCP.INDEX.Day365"],
+			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
+			"versions": {
+				"GCP.Climate.Projection.IR.Tas.2016-03-10.01": {
+					"uuid": "",
+					"version": "GCP.Climate.Projection.IR.Tas.2016-03-10.01",
+					"updated": "2016-03-10",
+					"dependencies": ["Agglomerated-Many.2016-02-17", "NASA-GDDP"],
+					"filepath": "shackleton:/shares/gcp/BCSD/grid2reg/cmip5/{{rcp}}/{{model}}/{{code_name}}/{{code_name}}_day_aggregated_{{rcp85.lower()}}_r1i1p1_{{model}}_*.nc"
+				}
+			}
 		},
-		"GCP_CLIMATE_Tmax_IR_Poppop": {
-			"uuid": "ec6f5926b6453610a1626b9424baa329726ce6c5e9a06542d465a96b7f3bd818",
-			"gcp_id": "GCP_CLIMATE_Tmax_IR_Poppop",
-			"name": "Tmax_IR_Poppop",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
+		"GCP.Climate.Projection.IR.Tasmax": {
+			"uuid": "",
+			"gcp_id": "GCP.Climate.Projection.IR.Tasmax",
+			"name": "Tasmax",
+			"project": "GCP",
+			"category": "Climate.Projection",
+			"code_name": "tasmax",
+			"latex": "{Tasmax}",
+			"description": "Daily maximum near-surface air temperature aggregated to GCP impact regions using spatial weighting",
+			"units": "Celsius",
+			"author": "Jiacan Yuan",
+			"contact": "jiacan.yuan@gmail.com",
+			"dims": ["GCP.INDEX.IR", "GCP.INDEX.Day365"],
+			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
+			"versions": {
+				"GCP.Climate.Projection.IR.Tasmax.2016-03-10.01": {
+					"uuid": "",
+					"version": "GCP.Climate.Projection.IR.Tasmax.2016-03-10.01",
+					"updated": "2016-03-10",
+					"dependencies": ["Agglomerated-Many.2016-02-17", "NASA-GDDP"],
+					"filepath": "shackleton:/shares/gcp/BCSD/grid2reg/cmip5/{{rcp}}/{{model}}/{{code_name}}/{{code_name}}_day_aggregated_{{rcp85.lower()}}_r1i1p1_{{model}}_*.nc"
+				}
+			}
 		},
-		"GCP_CLIMATE_Tmin_IR_Poppop": {
-			"uuid": "1e09ca76618d9c1dfbdeeb24f9177550fd4278da8dedf68d6e1c0ea10eb1aaca",
-			"gcp_id": "GCP_CLIMATE_Tmin_IR_Poppop",
-			"name": "Tmin_IR_Poppop",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
+		"GCP.Climate.Projection.IR.Tasmin": {
+			"uuid": "",
+			"gcp_id": "GCP.Climate.Projection.IR.Tasmin",
+			"name": "Tasmin",
+			"project": "GCP",
+			"category": "Climate.Projection",
+			"code_name": "tasmin",
+			"latex": "{Tasmin}",
+			"description": "Daily minimum near-surface air temperature aggregated to GCP impact regions using spatial weighting",
+			"units": "Celsius",
+			"author": "Jiacan Yuan",
+			"contact": "jiacan.yuan@gmail.com",
+			"updated": "2016-03-10",
+			"dims": ["GCP.INDEX.IR", "GCP.INDEX.Day365"],
+			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
+			"versions": {
+				"GCP.Climate.Projection.IR.Tasmin.2016-03-10.01": {
+					"uuid": "",
+					"version": "GCP.Climate.Projection.IR.Tasmin.2016-03-10.01",
+					"updated": "2016-03-10",
+					"dependencies": ["Agglomerated-Many.2016-02-17", "NASA-GDDP"],
+					"filepath": "shackleton:/shares/gcp/BCSD/grid2reg/cmip5/{{rcp}}/{{model}}/{{code_name}}/{{code_name}}_day_aggregated_{{rcp85.lower()}}_r1i1p1_{{model}}_*.nc"
+				}
+			}
 		},
-		"GCP_CLIMATE_TasSqr_IR_Poppop": {
-			"uuid": "6e96e57c4819b91ab3fd8f71626c78c0235f2e5b89ada5ccf81f8d87e01f0462",
-			"gcp_id": "GCP_CLIMATE_TasSqr_IR_Poppop",
-			"name": "TasSqr_IR_Poppop",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_TmaxSqr_IR_Poppop": {
-			"uuid": "85af41d726abba5777897def3b35fc12551b2edb152449a055eff301e5a0eba5",
-			"gcp_id": "GCP_CLIMATE_TmaxSqr_IR_Poppop",
-			"name": "TmaxSqr_IR_Poppop",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_TminSqr_IR_Poppop": {
-			"uuid": "a6b44c364f9b1ed1eddb79503efd9c24e3abfd4af30d482345f3ae9656350c6a",
-			"gcp_id": "GCP_CLIMATE_TminSqr_IR_Poppop",
-			"name": "TminSqr_IR_Poppop",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_Tas_IR_Gdpcap": {
-			"uuid": "8467082e629e12683717d59a3478f0193ec0c9955da1ed0b9345750c6da2e6e4",
-			"gcp_id": "GCP_CLIMATE_Tas_IR_Gdpcap",
-			"name": "Tas_IR_Gdpcap",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_Tmax_IR_Gdpcap": {
-			"uuid": "c83293ff69239609307c8461e302219c151c9bdb6ec6899f0c39011bcf8ded90",
-			"gcp_id": "GCP_CLIMATE_Tmax_IR_Gdpcap",
-			"name": "Tmax_IR_Gdpcap",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_Tmin_IR_Gdpcap": {
-			"uuid": "4967349af2afda618a4e4036a0d1510bfb7bac97d7134c37ab2e51cb0243f121",
-			"gcp_id": "GCP_CLIMATE_Tmin_IR_Gdpcap",
-			"name": "Tmin_IR_Gdpcap",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_TasSqr_IR_Gdpcap": {
-			"uuid": "96ad781d0b9603857180e97103301854f42d27de55b5db591b1f56d614e47e62",
-			"gcp_id": "GCP_CLIMATE_TasSqr_IR_Gdpcap",
-			"name": "TasSqr_IR_Gdpcap",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_TmaxSqr_IR_Gdpcap": {
-			"uuid": "b1b6415378d74b3fd55c4652697879d2256851936efadce45f48218a55db660b",
-			"gcp_id": "GCP_CLIMATE_TmaxSqr_IR_Gdpcap",
-			"name": "TmaxSqr_IR_Gdpcap",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_TminSqr_IR_Gdpcap": {
-			"uuid": "aa7a81c86c3a93746055d4df3a25729e850dd1623392e89b1fa0f0df36148f33",
-			"gcp_id": "GCP_CLIMATE_TminSqr_IR_Gdpcap",
-			"name": "TminSqr_IR_Gdpcap",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_Tas_IR_BinnedMortGdpcap": {
-			"uuid": "b9e6e614cac0ced23644e8618d99d10e75af725098fced03f332f3df25a40afb",
-			"gcp_id": "GCP_CLIMATE_Tas_IR_BinnedMortGdpcap",
-			"name": "Tas_IR_BinnedMortGdpcap",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365","GCP_INDEX_TempBinMortality"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_Tmax_IR_BinnedMortGdpcap": {
-			"uuid": "1d8ab6c8ce018d63f015f2a79329879576ff7818cd6add8002f09335d80715a9",
-			"gcp_id": "GCP_CLIMATE_Tmax_IR_BinnedMortGdpcap",
-			"name": "Tmax_IR_BinnedMortGdpcap",
-			"latex": "Tmax",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365","GCP_INDEX_TempBinMortality"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_Tmin_IR_BinnedMortGdpcap": {
-			"uuid": "7e2d3860d16365bd5cc603aac38d27bf6096e79bc2852bca90a301120c1ddb11",
-			"gcp_id": "GCP_CLIMATE_Tmin_IR_BinnedMortGdpcap",
-			"name": "Tmin_IR_BinnedMortGdpcap",
-			"latex": "Tmin",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365","GCP_INDEX_TempBinMortality"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_Tas_IR_BinnedMortPoppop": {
-			"uuid": "bbcb2abd34cd9db32893b3329ca3ba23554cdb2dfe2e4445ed3160384c651677",
-			"gcp_id": "GCP_CLIMATE_Tas_IR_BinnedMortPoppop",
-			"name": "Tas_IR_BinnedMortPoppop",
-			"latex": "T",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365","GCP_INDEX_TempBinMortality"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_Tmax_IR_BinnedMortPoppop": {
-			"uuid": "733bc4b67bffe0cc1da683244d04540a2e51f318084dee59ed6de6d02c78f877",
-			"gcp_id": "GCP_CLIMATE_Tmax_IR_BinnedMortPoppop",
-			"name": "Tmax_IR_BinnedMortPoppop",
-			"latex": "Tmax",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365","GCP_INDEX_TempBinMortality"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_CLIMATE_Tmin_IR_BinnedMortPoppop": {
-			"uuid": "ee4f07713e0df538dd17cb8c40bebac9256b8d8f3d6d7d8c323e7fc9d729feac",
-			"gcp_id": "GCP_CLIMATE_Tmin_IR_BinnedMortPoppop",
-			"name": "Tmin_IR_BinnedMortPoppop",
-			"latex": "Tmin",
-			"description": "",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365","GCP_INDEX_TempBinMortality"],
-			"scenarios": ["GCP_SCENARIOS_ClimateProjections"]
-		},
-		"GCP_SOCIOECONOMICS_Gdppc_IR_nightlights": {
-			"uuid": "421d947a9c114942309f78bd64622937710efe87798a04095b293128021da2f2",
-			"gcp_id": "GCP_SOCIOECONOMICS_Gdppc_IR_nightlights",
-			"name": "Gdppc_IR_nightlights",
-			"latex": "y",
-			"description": "GDP per capita, ",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_SSPs"]
-		},
-		"GCP_SOCIOECONOMICS_Poppop_IR_Landscan": {
-			"uuid": "aecba8361c37ab0e49b8a9ec6c54ff12e6a64701359758c9e42c5d32a7ce74a9",
-			"gcp_id": "GCP_SOCIOECONOMICS_Poppop_IR_Landscan",
-			"name": "Poppop_IR_Landscan",
-			"latex": "p",
-			"description": "Population weighted population density, derived from SSP country-level projections and distributed with landscan gridded population density",
-			"author": "Michael Delgado",
-			"updated": "",
-			"dims": ["GCP_INDEX_IR", "GCP_INDEX_Day365"],
-			"scenarios": ["GCP_SCENARIOS_SSPs"]
+		"GCP.Climate.Projection.IR.Precipitation": {
+			"uuid": "",
+			"gcp_id": "GCP.Climate.Projection.IR.Precipitation",
+			"name": "Precipitation",
+			"project": "GCP",
+			"category": "Climate.Projection",
+			"code_name": "pr",
+			"latex": "P",
+			"description": "Daily precipitation aggregated to GCP impact regions using spatial weighting",
+			"units": "mm/day",
+			"author": "Jiacan Yuan",
+			"contact": "jiacan.yuan@gmail.com",
+			"updated": "2016-03-10",
+			"dims": ["GCP.INDEX.IR", "GCP.INDEX.Day365"],
+			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
+			"versions": {
+				"GCP.Climate.Projection.IR.Precipitation.2016-03-10.01": {
+					"uuid": "",
+					"version": "GCP.Climate.Projection.IR.Precipitation.2016-03-10.01",
+					"updated": "2016-03-10",
+					"dependencies": ["Agglomerated-Many.2016-02-17", "NASA-GDDP"],
+					"filepath": "shackleton:/shares/gcp/BCSD/grid2reg/cmip5/{{rcp}}/{{model}}/{{code_name}}/{{code_name}}_day_aggregated_{{rcp85.lower()}}_r1i1p1_{{model}}_*.nc"
+				}
+			}
 		}
 	},
 	"scenarios": {
-		"GCP_SCENARIOS_ClimateProjections": {
+		"GCP.Scenarios.RCPs": {
 			"uuid": "4b0d10da1974eccc2dc9893859beaccfa44d973d4a3d57a72718a2413724913f",
-			"gcp_id": "GCP_SCENARIOS_ClimateProjections",
+			"gcp_id": "GCP.Scenarios.RCPs",
 			"runs": [
-				{"rcp": "rcp45", "model": "ACCESS1-0"},
-				{"rcp": "rcp45", "model": "CanESM2"},
-				{"rcp": "rcp45", "model": "CNRM-CM5"},
-				{"rcp": "rcp45", "model": "GFDL-ESM2G"},
-				{"rcp": "rcp45", "model": "IPSL-CM5A-LR"},
-				{"rcp": "rcp45", "model": "MIROC-ESM"},
-				{"rcp": "rcp45", "model": "MPI-ESM-MR"},
-				{"rcp": "rcp45", "model": "bcc-csm1-1"},
-				{"rcp": "rcp45", "model": "CCSM4"},
-				{"rcp": "rcp45", "model": "CSIRO-Mk3-6-0"},
-				{"rcp": "rcp45", "model": "GFDL-ESM2M"},
-				{"rcp": "rcp45", "model": "IPSL-CM5A-MR"},
-				{"rcp": "rcp45", "model": "MIROC-ESM-CHEM"},
-				{"rcp": "rcp45", "model": "MRI-CGCM3"},
-				{"rcp": "rcp45", "model": "BNU-ESM"},
-				{"rcp": "rcp45", "model": "CESM1-BGC"},
-				{"rcp": "rcp45", "model": "GFDL-CM3"},
-				{"rcp": "rcp45", "model": "inmcm4"},
-				{"rcp": "rcp45", "model": "MIROC5"},
-				{"rcp": "rcp45", "model": "MPI-ESM-LR"},
-				{"rcp": "rcp45", "model": "NorESM1-M"},
-				{"rcp": "rcp85", "model": "ACCESS1-0"},
-				{"rcp": "rcp85", "model": "CanESM2"},
-				{"rcp": "rcp85", "model": "CNRM-CM5"},
-				{"rcp": "rcp85", "model": "GFDL-ESM2G"},
-				{"rcp": "rcp85", "model": "IPSL-CM5A-LR"},
-				{"rcp": "rcp85", "model": "MIROC-ESM"},
-				{"rcp": "rcp85", "model": "MPI-ESM-MR"},
-				{"rcp": "rcp85", "model": "bcc-csm1-1"},
-				{"rcp": "rcp85", "model": "CCSM4"},
-				{"rcp": "rcp85", "model": "CSIRO-Mk3-6-0"},
-				{"rcp": "rcp85", "model": "GFDL-ESM2M"},
-				{"rcp": "rcp85", "model": "IPSL-CM5A-MR"},
-				{"rcp": "rcp85", "model": "MIROC-ESM-CHEM"},
-				{"rcp": "rcp85", "model": "MRI-CGCM3"},
-				{"rcp": "rcp85", "model": "BNU-ESM"},
-				{"rcp": "rcp85", "model": "CESM1-BGC"},
-				{"rcp": "rcp85", "model": "GFDL-CM3"},
-				{"rcp": "rcp85", "model": "inmcm4"},
-				{"rcp": "rcp85", "model": "MIROC5"},
-				{"rcp": "rcp85", "model": "MPI-ESM-LR"},
-				{"rcp": "rcp85", "model": "NorESM1-M"}
+				{"rcp": "historical"},
+				{"rcp": "rcp45"},
+				{"rcp": "rcp85"}
+			]
+		},
+		"GCP.Scenarios.ClimateModels": {
+			"uuid": "",
+			"gcp_id": "GCP.Scenarios.ClimateModels",
+			"runs": [
+				{"model": "ACCESS1-0"},
+				{"model": "CanESM2"},
+				{"model": "CNRM-CM5"},
+				{"model": "GFDL-ESM2G"},
+				{"model": "IPSL-CM5A-LR"},
+				{"model": "MIROC-ESM"},
+				{"model": "MPI-ESM-MR"},
+				{"model": "bcc-csm1-1"},
+				{"model": "CCSM4"},
+				{"model": "CSIRO-Mk3-6-0"},
+				{"model": "GFDL-ESM2M"},
+				{"model": "IPSL-CM5A-MR"},
+				{"model": "MIROC-ESM-CHEM"},
+				{"model": "MRI-CGCM3"},
+				{"model": "BNU-ESM"},
+				{"model": "CESM1-BGC"},
+				{"model": "GFDL-CM3"},
+				{"model": "inmcm4"},
+				{"model": "MIROC5"},
+				{"model": "MPI-ESM-LR"},
+				{"model": "NorESM1-M"}
 			]
 		},
 		"GCP_SCENARIOS_SSPs": {
@@ -474,9 +520,5 @@
 				{"ssp_model": "IIASA Wic-Pop", "ssp": "SSP5"}
 			]
 		}
-
-	},
-	"functions": {
-
 	}
 }
