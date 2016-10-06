@@ -253,14 +253,14 @@ class ClimateImpactLabDataAPI(object):
 
 	def publish(self, variable, **kwargs):
 
+		def get_attr(attr):
+			attr = unicode(attr)
+			return kwargs.get(attr, variable.attrs.get(attr, raw_input('{}: '.format(attr))))
+
 		with open('database.json', 'r') as fp:
 			ds = json.loads(fp.read())
 
-		if 'gcp_id' in variable.attrs:
-			gcp_id = variable.attrs['gcp_id']
-		else:
-			gcp_id = raw_input('{}: '.format('gcp_id'))
-			variable.attrs['gcp_id'] = gcp_id
+		gcp_id = get_attr('gcp_id')
 
 		if gcp_id in ds:
 			raise KeyError('{} already in dataset'.format(gcp_id))
@@ -268,11 +268,11 @@ class ClimateImpactLabDataAPI(object):
 		ds['variables'][gcp_id] = {
 			'uuid': hashlib.sha256(str(np.random.random())).hexdigest(),
 			'updated': pd.datetime.now().strftime('%c'),
-			'dims': [{'name': ds['dims'][d]['name'], 'gcp_id': ds['dims'][d]['gcp_id']} for d in variable.dims]
+			'dims': [{'name': ds['dims'][d]['name'], 'gcp_id': ds['dims'][d]['gcp_id']} for d in variable.value.dims]
 		}
 
 		for attr in self.REQUIRED:
-			ds['variables'][gcp_id][attr] = kwargs.get(attr, variable.attrs.get(attr, raw_input('{}: '.format(attr))))
+			ds['variables'][gcp_id][attr] = get_attr(attr)
 
 		with open('database.json', 'w+') as fp:
 			fp.write(json.dumps(ds, sort_keys=True, indent=4))
