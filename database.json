@@ -197,7 +197,7 @@
 				"table_id": "Table day (12 November 2010)",
 				"source": "BCSD 2014",
 				"forcing": "N/A",
-				"product": "output",
+				"product": "output"
 			},
 			"dims": [
 				{"name": "lat", "gcp_id": "GCP.INDEX.LatQtrDeg"}, 
@@ -257,7 +257,7 @@
 				"table_id": "Table day (12 November 2010)",
 				"source": "BCSD 2014",
 				"forcing": "N/A",
-				"product": "output",
+				"product": "output"
 			},
 			"dims": [
 				{"name": "lat", "gcp_id": "GCP.INDEX.LatQtrDeg"}, 
@@ -380,7 +380,10 @@
 			"author": "Jiacan Yuan",
 			"contact": "jiacan.yuan@gmail.com",
 			"updated": "2016-03-10",
-			"dims": ["GCP.INDEX.IR", "GCP.INDEX.Day365"],
+			"dims": [
+				{"name": "SHAPENUM", "gcp_id": "GCP.INDEX.IR"}, 
+				{"name": "time", "gcp_id": "GCP.INDEX.Day365"}
+			],
 			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
 			"versions": {
 				"GCP.Climate.Projection.IR.Tas.2016-03-10.01": {
@@ -404,7 +407,10 @@
 			"units": "Celsius",
 			"author": "Jiacan Yuan",
 			"contact": "jiacan.yuan@gmail.com",
-			"dims": ["GCP.INDEX.IR", "GCP.INDEX.Day365"],
+			"dims": [
+				{"name": "SHAPENUM", "gcp_id": "GCP.INDEX.IR"}, 
+				{"name": "time", "gcp_id": "GCP.INDEX.Day365"}
+			],
 			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
 			"versions": {
 				"GCP.Climate.Projection.IR.Tasmax.2016-03-10.01": {
@@ -429,7 +435,10 @@
 			"author": "Jiacan Yuan",
 			"contact": "jiacan.yuan@gmail.com",
 			"updated": "2016-03-10",
-			"dims": ["GCP.INDEX.IR", "GCP.INDEX.Day365"],
+			"dims": [
+				{"name": "SHAPENUM", "gcp_id": "GCP.INDEX.IR"}, 
+				{"name": "time", "gcp_id": "GCP.INDEX.Day365"}
+			],
 			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
 			"versions": {
 				"GCP.Climate.Projection.IR.Tasmin.2016-03-10.01": {
@@ -454,7 +463,10 @@
 			"author": "Jiacan Yuan",
 			"contact": "jiacan.yuan@gmail.com",
 			"updated": "2016-03-10",
-			"dims": ["GCP.INDEX.IR", "GCP.INDEX.Day365"],
+			"dims": [
+				{"name": "SHAPENUM", "gcp_id": "GCP.INDEX.IR"}, 
+				{"name": "time", "gcp_id": "GCP.INDEX.Day365"}
+			],
 			"scenarios": ["GCP.Scenarios.RCPs", "GCP.Scenarios.ClimateModels"],
 			"versions": {
 				"GCP.Climate.Projection.IR.Precipitation.2016-03-10.01": {
