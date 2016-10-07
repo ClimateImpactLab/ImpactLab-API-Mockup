@@ -86,7 +86,7 @@ class Variable(object):
 	def latest(self, valuee):
 		raise ValueError('Cannot set latest')
 
-	@
+	# @
 
 	def __add__(self, other):
 		other = self._coerce(other)
