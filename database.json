@@ -158,6 +158,7 @@
 		"GCP.Climate.Projection.GridQtrDeg.Tasmin": {
 			"uuid": "",
 			"gcp_id": "GCP.Climate.Projection.GridQtrDeg.Tasmin",
+			"derived": false,
 			"name": "GridQtrDeg.Tasmin",
 			"project": "GCP",
 			"category": "Climate.Projection",
@@ -218,6 +219,7 @@
 		"GCP.Climate.Projection.GridQtrDeg.Tasmax": {
 			"uuid": "",
 			"gcp_id": "GCP.Climate.Projection.GridQtrDeg.Tasmax",
+			"derived": false,
 			"name": "GridQtrDeg.Tasmax",
 			"project": "GCP",
 			"category": "Climate.Projection",
@@ -278,6 +280,7 @@
 		"GCP.Climate.Projection.GridQtrDeg.Precipitation": {
 			"uuid": "",
 			"gcp_id": "GCP.Climate.Projection.GridQtrDeg.Precipitation",
+			"derived": false,
 			"name": "GridQtrDeg.Precipitation",
 			"project": "GCP",
 			"category": "Climate.Projection",

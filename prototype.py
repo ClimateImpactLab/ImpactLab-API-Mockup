@@ -28,9 +28,10 @@ class Variable(object):
 	this configuration should work.
 
 	'''
-	def __init__(self, api, value, symbolic=None):
+	def __init__(self, api, value, symbolic=None, derived=True, dependencies=[]):
 		self.api = api
 		self.value=value
+		self.dependencies = dependencies
 
 		if symbolic is None:
 			if hasattr(value, 'attrs'):
@@ -73,20 +74,28 @@ class Variable(object):
 	def symbolic(self):
 		return self._symbolic
 
-
 	@symbolic.setter
 	def symbolic(self, value):
 		 self._symbolic = '{}{}'.format(value, self.get_latex_dims())
 
+	@property
+	def latest(self):
+		return sorted([v for k, v in self.attrs['versions'].items()], key=lambda x: x[0])[0]
+
+	@latest.setter
+	def latest(self, valuee):
+		raise ValueError('Cannot set latest')
+
+	@
 
 	def __add__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, self.value + other.value, '{} + {}'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value + other.value, '{} + {}'.format(self.symbolic, other.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __radd__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, other.value + self.value, '{} + {}'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value + self.value, '{} + {}'.format(other.symbolic, self.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __iadd__(self, other):
@@ -95,12 +104,12 @@ class Variable(object):
 
 	def __sub__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, self.value - other.value, '{} - {}'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value - other.value, '{} - {}'.format(self.symbolic, other.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __rsub__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, other.value - self.value, '{} - {}'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value - self.value, '{} - {}'.format(other.symbolic, self.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __isub__(self, other):
@@ -109,12 +118,12 @@ class Variable(object):
 
 	def __mul__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, self.value * other.value, '\\left({}\\right)\\left({}\\right)'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value * other.value, '\\left({}\\right)\\left({}\\right)'.format(self.symbolic, other.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __rmul__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, other.value * self.value, '\\left({}\\right)\\left({}\\right)'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value * self.value, '\\left({}\\right)\\left({}\\right)'.format(other.symbolic, self.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __imul__(self, other):
@@ -123,12 +132,12 @@ class Variable(object):
 
 	def __div__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, self.value / other.value, '\\frac{{\\left({}\\right)}}{{\\left({}\\right)}}'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value / other.value, '\\frac{{\\left({}\\right)}}{{\\left({}\\right)}}'.format(self.symbolic, other.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __rdiv__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, other.value / self.value, '\\frac{{\\left({}\\right)}}{{\\left({}\\right)}}'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value / self.value, '\\frac{{\\left({}\\right)}}{{\\left({}\\right)}}'.format(other.symbolic, self.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __idiv__(self, other):
@@ -137,12 +146,12 @@ class Variable(object):
 
 	def __pow__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, self.value ** other.value, '{{\\left({}\\right)}}^{{\\left({}\\right)}}'.format(self.symbolic, other.symbolic))
+		return Variable(self.api, self.value ** other.value, '{{\\left({}\\right)}}^{{\\left({}\\right)}}'.format(self.symbolic, other.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __rpow__(self, other):
 		other = self._coerce(other)
-		return Variable(self.api, other.value ** self.value, '{{\\left({}\\right)}}^{{\\left({}\\right)}}'.format(other.symbolic, self.symbolic))
+		return Variable(self.api, other.value ** self.value, '{{\\left({}\\right)}}^{{\\left({}\\right)}}'.format(other.symbolic, self.symbolic), self.dependencies | other.dependencies | self.latest.version | other.latest.version)
 
 
 	def __ipow__(self, other):
@@ -150,10 +159,10 @@ class Variable(object):
 
 
 	def sum(self, dim=None):
-		return Variable(self.api, self.value.sum(dim=dim), '\\sum{}{{\\left\\{{{}\\right\\}}}}'.format(('_{{{}\in {}}}'.format(dim, dim.upper()) if dim is not None else ''), self.symbolic))
+		return Variable(self.api, self.value.sum(dim=dim), '\\sum{}{{\\left\\{{{}\\right\\}}}}'.format(('_{{{}\in {}}}'.format(dim, dim.upper()) if dim is not None else ''), self.symbolic), self.dependencies.copy())
 
 	def ln(self):
-		return Variable(self.api, np.log(self.value), '\\ln{{\\left({}\\right)}}'.format(self.symbolic))
+		return Variable(self.api, np.log(self.value), '\\ln{{\\left({}\\right)}}'.format(self.symbolic), self.dependencies.copy())
 
 	def get_symbol(self):
 		return self.attrs['latex'] + self.get_latex_dims()
@@ -211,6 +220,15 @@ def require(*kwargs):
 		return do_func
 	return get_decorator
 
+class VariableGetter(object):
+	def __init__(self, var=None):
+		if var:
+			self._var = var
+			self.get_var = self._get_var
+	def _get_var(self):
+		return self._var
+	def __repr__(self):
+		return '\n'.join(map(str, sorted(self.__dict__.keys())))
 
 class ClimateImpactLabDataAPI(object):
 	'''
@@ -235,6 +253,7 @@ class ClimateImpactLabDataAPI(object):
 		'''
 
 		self.database = {}
+		self.variables = VariableGetter()
 
 		with open('database.json', 'r') as fp:
 			ds = json.loads(fp.read())
@@ -244,17 +263,26 @@ class ClimateImpactLabDataAPI(object):
 		for var in ds['variables']:
 			data = np.ones(tuple([len(d.get('values', [0])) for d in ds['variables'][var]['dims']]))
 			coords = [(ds['dims'][d['gcp_id']]['gcp_id'], d.get('values', [0])) for d in ds['variables'][var]['dims']]
+			derived = ds['variables'][var].get('derived', True)
 
-			self.database[var] = Variable(self, xr.DataArray(data, coords=coords, attrs = ds['variables'][var]))
+			self.database[var] = Variable(self, xr.DataArray(data, coords=coords, attrs = ds['variables'][var]), derived=derived)
 			self.database[var].value = self.database[var].value.chunk(tuple([1 for d in ds['variables'][var]['dims']]))
 			
-			self.database[var].latest = sorted(ds['variables'][var]['versions'].items(), key=lambda x: x[0])[0]
+			varcomponents = var.split('.')
+
+			this = self.variables
+
+			for i, comp in enumerate(varcomponents[:-1]):
+				if not comp in this.__dict__:
+					this.__dict__[comp] = VariableGetter()
+				this = this.__dict__[comp]
+
+			this.__dict__[varcomponents[-1]] = VariableGetter(self.database[var])
 
 
 	def publish(self, variable, **kwargs):
 
 		def get_attr(attr):
-			attr = unicode(attr)
 			return kwargs.get(attr, variable.attrs.get(attr, raw_input('{}: '.format(attr))))
 
 		with open('database.json', 'r') as fp:
@@ -273,6 +301,18 @@ class ClimateImpactLabDataAPI(object):
 
 		for attr in self.REQUIRED:
 			ds['variables'][gcp_id][attr] = get_attr(attr)
+
+		updated = pd.timestamp.now().strftime('%Y-%m-%d %H:%M:%S')
+		version = '{}.{}'.format(gcp_id, updated)
+		ds['variables']['versions'] = {
+			version : {
+				'uuid': '',
+				'version': version,
+				'updated': updated,
+				'dependencies': variable.dependencies,
+				'filepath': ''
+			}
+		}
 
 		with open('database.json', 'w+') as fp:
 			fp.write(json.dumps(ds, sort_keys=True, indent=4))
