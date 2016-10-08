@@ -228,7 +228,10 @@ class VariableGetter(object):
 	def _get_var(self):
 		return self._var
 	def __repr__(self):
-		return '\n'.join(map(str, sorted(self.__dict__.keys())))
+		return '\n'.join(map(str, self.list_variables()))
+
+	def list_variables(self):
+		return sorted(self.__dict__.keys())
 
 class ClimateImpactLabDataAPI(object):
 	'''
