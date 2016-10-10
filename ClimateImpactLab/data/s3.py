@@ -1,22 +1,23 @@
 import boto3
+from botocore.exceptions import ClientError
+from ..utils.exceptions import ConnectionError
 
-session = boto3.Session(profile_name='cil')
-client = session.client('s3', endpoint_url='https://griffin-objstore.opensciencedatacloud.org')
+class Griffin(object):
+    def __init__(self):
+        self._session = boto3.Session(profile_name='cil')
+        self._client = self._session.client('s3', endpoint_url='https://griffin-objstore.opensciencedatacloud.org')
+        self._s3 = self._session.resource('s3', endpoint_url='https://griffin-objstore.opensciencedatacloud.org')
 
-# import boto3.s3.connection
-# bucket_name = 'put your bucket name here!'
-# gateway = 'griffin-objstore.opensciencedatacloud.org'
+    def download(self, bucket, object_name):
+        try:
+            return self._s3.Object(bucket, object_name).get()
+        except ClientError:
+            raise ConnectionError('Error downloading {}'.format(object_name))
 
-# conn = boto.connect_s3(
-#         host = gateway,
-#         profile_name = 
-#         #is_secure=False,               # uncomment if you are not using ssl
-#         calling_format = boto.s3.connection.OrdinaryCallingFormat(),
-#         )
+    def upload(self, bucket, object_name, filepath):
+        # try:
+        self._s3.Object(bucket, object_name).put(Body=open(filepath, 'rb'))
+        # except ClientError:
+        #     raise ConnectionError('Error uploading {}'.format(object_name))
 
-# ### list buckets::
-# for bucket in conn.get_all_buckets():
-#         print "{name}\t{created}".format(
-#                 name = bucket.name,
-#                 created = bucket.creation_date,
-#         )
+        
